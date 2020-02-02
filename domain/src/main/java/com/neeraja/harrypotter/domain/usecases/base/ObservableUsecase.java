@@ -15,7 +15,7 @@ public abstract class ObservableUsecase<T, Input> {
 
     protected abstract Observable generateObservable(Input input);
 
-    Observable<T> buildUsecase(Input input) {
+    public Observable<T> buildUsecase(Input input) {
         return generateObservable(input)
                 .subscribeOn(backgroundScheduler)
                 .observeOn(foregroundScheduler);

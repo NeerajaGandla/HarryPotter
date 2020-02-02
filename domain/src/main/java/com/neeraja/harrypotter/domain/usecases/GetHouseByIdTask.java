@@ -28,11 +28,19 @@ public class GetHouseByIdTask extends ObservableUsecase<HouseEntity, GetHouseByI
 
     @Override
     protected Observable generateObservable(Params params) {
-        return null;
+        if (params == null) {
+            throw new IllegalArgumentException("User identifier can't be null");
+        }
+        return hogwartsRepository.getHouseByID(params.apiKey, params.houseId);
     }
 
-    class Params {
+    static class Params {
         String apiKey;
         String houseId;
+
+        Params(String apiKey, String houseId) {
+            this.apiKey = apiKey;
+            this.houseId = houseId;
+        }
     }
 }

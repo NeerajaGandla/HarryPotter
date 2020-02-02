@@ -35,6 +35,19 @@ public class CharacterEntity {
     @Expose
     private String species;
 
+    public CharacterEntity(String id, String name, String role, int __v, boolean ministryOfMagic, boolean orderOfThePhoenix, boolean dumbledoresArmy, boolean deathEater, String bloodStatus, String species) {
+        this.id = id;
+        this.name = name;
+        this.role = role;
+        this.__v = __v;
+        this.ministryOfMagic = ministryOfMagic;
+        this.orderOfThePhoenix = orderOfThePhoenix;
+        this.dumbledoresArmy = dumbledoresArmy;
+        this.deathEater = deathEater;
+        this.bloodStatus = bloodStatus;
+        this.species = species;
+    }
+
     public String getId() {
         return id;
     }

@@ -30,13 +30,21 @@ public class GetCharacterByIdTask extends ObservableUsecase<CharacterEntity, Get
 
     @Override
     protected Observable generateObservable(Params params) {
+        if (params == null) {
+            throw new IllegalArgumentException("FilterTransactionsTask parameter can't be null");
+        }
         return hogwartsRepository.getCharacterByID(params.apiKey, params.characterId)
                 .subscribeOn(backgroundScheduler)
                 .observeOn(foregroundScheduler);
     }
 
-    class Params {
+    static class Params {
         String apiKey;
         String characterId;
+
+        Params(String apiKey, String characterId) {
+            this.apiKey = apiKey;
+            this.characterId = characterId;
+        }
     }
 }

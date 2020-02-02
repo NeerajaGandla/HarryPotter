@@ -27,6 +27,9 @@ public class HouseEntity {
     @SerializedName("__v")
     @Expose
     private int __v;
+    @SerializedName("school")
+    @Expose
+    private String school;
     @SerializedName("members")
     @Expose
     private String[] members;
@@ -36,6 +39,20 @@ public class HouseEntity {
     @SerializedName("colors")
     @Expose
     private String[] colors;
+
+    public HouseEntity(String id, String name, String mascot, String headOfHouse, String houseGhost, String founder, int __v, String school, String[] members, String[] values, String[] colors) {
+        this.id = id;
+        this.name = name;
+        this.mascot = mascot;
+        this.headOfHouse = headOfHouse;
+        this.houseGhost = houseGhost;
+        this.founder = founder;
+        this.__v = __v;
+        this.school = school;
+        this.members = members;
+        this.values = values;
+        this.colors = colors;
+    }
 
     public String getId() {
         return id;
@@ -115,6 +132,14 @@ public class HouseEntity {
 
     public void setColors(String[] colors) {
         this.colors = colors;
+    }
+
+    public String getSchool() {
+        return school;
+    }
+
+    public void setSchool(String school) {
+        this.school = school;
     }
 
     @Override
