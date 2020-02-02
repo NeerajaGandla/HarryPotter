@@ -2,6 +2,7 @@ package com.neeraja.harrypotter.domain.utils;
 
 import com.neeraja.harrypotter.domain.entities.CharacterEntity;
 import com.neeraja.harrypotter.domain.entities.HouseEntity;
+import com.neeraja.harrypotter.domain.entities.MemberEntity;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -33,9 +34,9 @@ public class TestDataGenerator {
                 "Goderic Gryffindor",
                 0,
                 "Hogwarts School of Witchcraft and Wizardry",
-                new String[]{
-                        "5a0fa648ae5bc100213c2332",
-                        "5a0fa67dae5bc100213c2333"
+                new MemberEntity[]{
+                        new MemberEntity("test1", "5a0fa648ae5bc100213c2332"),
+                        new MemberEntity("test2", "5a0fa67dae5bc100213c2333")
                 },
                 new String[]{
                         "courage",
@@ -60,9 +61,9 @@ public class TestDataGenerator {
                 "Goderic Gryffindor",
                 0,
                 "Hogwarts School of Witchcraft and Wizardry",
-                new String[]{
-                        "5a0fa648ae5bc100213c2332",
-                        "5a0fa67dae5bc100213c2333"
+                new MemberEntity[]{
+                        new MemberEntity("test1", "5a0fa648ae5bc100213c2332"),
+                        new MemberEntity("test2", "5a0fa67dae5bc100213c2333")
                 },
                 new String[]{
                         "courage",
@@ -81,9 +82,9 @@ public class TestDataGenerator {
                 "Rowena Ravenclaw",
                 0,
                 "Hogwarts School of Witchcraft and Wizardry",
-                new String[]{
-                        "5a0fa8a6ae5bc100213c233b",
-                        "5a107ffee0686c0021283b21"
+                new MemberEntity[]{
+                        new MemberEntity("test3", "5a0fa8a6ae5bc100213c233b"),
+                        new MemberEntity("test4", "5a107ffee0686c0021283b21")
                 },
                 new String[]{
                         "intelligence",

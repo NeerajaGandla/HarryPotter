@@ -32,7 +32,7 @@ public class HouseEntity {
     private String school;
     @SerializedName("members")
     @Expose
-    private String[] members;
+    private MemberEntity[] members;
     @SerializedName("values")
     @Expose
     private String[] values;
@@ -40,7 +40,7 @@ public class HouseEntity {
     @Expose
     private String[] colors;
 
-    public HouseEntity(String id, String name, String mascot, String headOfHouse, String houseGhost, String founder, int __v, String school, String[] members, String[] values, String[] colors) {
+    public HouseEntity(String id, String name, String mascot, String headOfHouse, String houseGhost, String founder, int __v, String school, MemberEntity[] members, String[] values, String[] colors) {
         this.id = id;
         this.name = name;
         this.mascot = mascot;
@@ -110,11 +110,11 @@ public class HouseEntity {
         this.__v = __v;
     }
 
-    public String[] getMembers() {
+    public MemberEntity[] getMembers() {
         return members;
     }
 
-    public void setMembers(String[] members) {
+    public void setMembers(MemberEntity[] members) {
         this.members = members;
     }
 

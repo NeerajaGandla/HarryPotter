@@ -1,0 +1,117 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/apple/Downloads/HarryPotter/data/src/main/AndroidManifest.xml:1:1-11:12
+INJECTED from /Users/apple/Downloads/HarryPotter/data/src/main/AndroidManifest.xml:1:1-11:12
+INJECTED from /Users/apple/Downloads/HarryPotter/data/src/main/AndroidManifest.xml:1:1-11:12
+INJECTED from /Users/apple/Downloads/HarryPotter/data/src/main/AndroidManifest.xml:1:1-11:12
+MERGED from [androidx.appcompat:appcompat:1.1.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/281922412e87e75b4562117b2deaf869/appcompat-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment:1.1.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/82cdac3dbe66d7c4527f4421f22e0cc6/fragment-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/07cfb170b570a37b631bc21a45a1a78b/jetified-appcompat-resources-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/57017c381e8166d9314865199778a4d6/drawerlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/ace59ad1fe89a141368845eb32d9111a/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/f14fefa5aaf3a068eee1a3e67378cbec/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.0.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/fb0c40eaebabb49a279f315b614f2a53/jetified-activity-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/74b8af2520a5300c2bab8644b007c246/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/7949c638c9bb670fc47ea45db574c1cd/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.0.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/714f30169b70853507c116aeb517e5c2/customview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.1.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/279861f12c057092d1e6acc85106df71/core-1.1.0/AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/2c51ed147191ed3784039dbe7f3b1723/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/0a9d6391243ecdff8a0446514385faa5/versionedparcelable-1.1.0/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/42327c7dc051b951317efa1f98ec82f7/lifecycle-runtime-2.1.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/0c34abfdfa4091a75e7e567098363c44/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/e5e5c7a7fd1e57c0d9c8f6c1eddac1fb/jetified-savedstate-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/a0d28a37f48b04974431a0de18d64fe7/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/3f296615f82750bdc8f9af4ed70fcd6a/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/19bf8b40651d96c08d43c60d6ec58c1d/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/076d3e7101b7612c31c44dd313b34894/core-runtime-2.0.0/AndroidManifest.xml:17:1-22:12
+INJECTED from /Users/apple/Downloads/HarryPotter/data/src/main/AndroidManifest.xml:1:1-11:12
+INJECTED from /Users/apple/Downloads/HarryPotter/data/src/main/AndroidManifest.xml:1:1-11:12
+INJECTED from /Users/apple/Downloads/HarryPotter/data/src/main/AndroidManifest.xml:1:1-11:12
+	package
+		ADDED from /Users/apple/Downloads/HarryPotter/data/src/main/AndroidManifest.xml:2:5-43
+		INJECTED from /Users/apple/Downloads/HarryPotter/data/src/main/AndroidManifest.xml
+		INJECTED from /Users/apple/Downloads/HarryPotter/data/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/apple/Downloads/HarryPotter/data/src/main/AndroidManifest.xml
+		ADDED from /Users/apple/Downloads/HarryPotter/data/src/main/AndroidManifest.xml:1:1-11:12
+		INJECTED from /Users/apple/Downloads/HarryPotter/data/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/apple/Downloads/HarryPotter/data/src/main/AndroidManifest.xml
+		ADDED from /Users/apple/Downloads/HarryPotter/data/src/main/AndroidManifest.xml:1:1-11:12
+		INJECTED from /Users/apple/Downloads/HarryPotter/data/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/apple/Downloads/HarryPotter/data/src/main/AndroidManifest.xml:1:11-69
+application
+ADDED from /Users/apple/Downloads/HarryPotter/data/src/main/AndroidManifest.xml:4:5-10:43
+MERGED from [androidx.core:core:1.1.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/279861f12c057092d1e6acc85106df71/core-1.1.0/AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.1.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/279861f12c057092d1e6acc85106df71/core-1.1.0/AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/0a9d6391243ecdff8a0446514385faa5/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/0a9d6391243ecdff8a0446514385faa5/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.1.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/279861f12c057092d1e6acc85106df71/core-1.1.0/AndroidManifest.xml:24:18-86
+	android:supportsRtl
+		ADDED from /Users/apple/Downloads/HarryPotter/data/src/main/AndroidManifest.xml:9:9-35
+	android:label
+		ADDED from /Users/apple/Downloads/HarryPotter/data/src/main/AndroidManifest.xml:7:9-41
+	android:roundIcon
+		ADDED from /Users/apple/Downloads/HarryPotter/data/src/main/AndroidManifest.xml:8:9-54
+	android:icon
+		ADDED from /Users/apple/Downloads/HarryPotter/data/src/main/AndroidManifest.xml:6:9-43
+	android:allowBackup
+		ADDED from /Users/apple/Downloads/HarryPotter/data/src/main/AndroidManifest.xml:5:9-35
+	android:theme
+		ADDED from /Users/apple/Downloads/HarryPotter/data/src/main/AndroidManifest.xml:10:9-40
+uses-sdk
+INJECTED from /Users/apple/Downloads/HarryPotter/data/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/apple/Downloads/HarryPotter/data/src/main/AndroidManifest.xml
+INJECTED from /Users/apple/Downloads/HarryPotter/data/src/main/AndroidManifest.xml
+MERGED from [androidx.appcompat:appcompat:1.1.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/281922412e87e75b4562117b2deaf869/appcompat-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.1.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/281922412e87e75b4562117b2deaf869/appcompat-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.1.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/82cdac3dbe66d7c4527f4421f22e0cc6/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.1.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/82cdac3dbe66d7c4527f4421f22e0cc6/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/07cfb170b570a37b631bc21a45a1a78b/jetified-appcompat-resources-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.1.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/07cfb170b570a37b631bc21a45a1a78b/jetified-appcompat-resources-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/57017c381e8166d9314865199778a4d6/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/57017c381e8166d9314865199778a4d6/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/ace59ad1fe89a141368845eb32d9111a/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/ace59ad1fe89a141368845eb32d9111a/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/f14fefa5aaf3a068eee1a3e67378cbec/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/f14fefa5aaf3a068eee1a3e67378cbec/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.0.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/fb0c40eaebabb49a279f315b614f2a53/jetified-activity-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.0.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/fb0c40eaebabb49a279f315b614f2a53/jetified-activity-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/74b8af2520a5300c2bab8644b007c246/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/74b8af2520a5300c2bab8644b007c246/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/7949c638c9bb670fc47ea45db574c1cd/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/7949c638c9bb670fc47ea45db574c1cd/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.0.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/714f30169b70853507c116aeb517e5c2/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/714f30169b70853507c116aeb517e5c2/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.1.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/279861f12c057092d1e6acc85106df71/core-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.1.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/279861f12c057092d1e6acc85106df71/core-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/2c51ed147191ed3784039dbe7f3b1723/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/2c51ed147191ed3784039dbe7f3b1723/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/0a9d6391243ecdff8a0446514385faa5/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/0a9d6391243ecdff8a0446514385faa5/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/42327c7dc051b951317efa1f98ec82f7/lifecycle-runtime-2.1.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/42327c7dc051b951317efa1f98ec82f7/lifecycle-runtime-2.1.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/0c34abfdfa4091a75e7e567098363c44/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/0c34abfdfa4091a75e7e567098363c44/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/e5e5c7a7fd1e57c0d9c8f6c1eddac1fb/jetified-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/e5e5c7a7fd1e57c0d9c8f6c1eddac1fb/jetified-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/a0d28a37f48b04974431a0de18d64fe7/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/a0d28a37f48b04974431a0de18d64fe7/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/3f296615f82750bdc8f9af4ed70fcd6a/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/3f296615f82750bdc8f9af4ed70fcd6a/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/19bf8b40651d96c08d43c60d6ec58c1d/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/19bf8b40651d96c08d43c60d6ec58c1d/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/076d3e7101b7612c31c44dd313b34894/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/apple/.gradle/caches/transforms-2/files-2.1/076d3e7101b7612c31c44dd313b34894/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
+INJECTED from /Users/apple/Downloads/HarryPotter/data/src/main/AndroidManifest.xml
+INJECTED from /Users/apple/Downloads/HarryPotter/data/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/apple/Downloads/HarryPotter/data/src/main/AndroidManifest.xml
+		ADDED from /Users/apple/Downloads/HarryPotter/data/src/main/AndroidManifest.xml
+		INJECTED from /Users/apple/Downloads/HarryPotter/data/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/apple/Downloads/HarryPotter/data/src/main/AndroidManifest.xml
+		ADDED from /Users/apple/Downloads/HarryPotter/data/src/main/AndroidManifest.xml
+		INJECTED from /Users/apple/Downloads/HarryPotter/data/src/main/AndroidManifest.xml
