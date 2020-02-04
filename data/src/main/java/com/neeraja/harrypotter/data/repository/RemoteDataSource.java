@@ -9,9 +9,9 @@ import java.util.List;
 import io.reactivex.Observable;
 
 public interface RemoteDataSource {
-    Observable<HouseData> getHouseById(String apiKey, String houseId);
+    Observable<HouseData> getHouseById(String houseId);
 
-    Observable<List<HouseData>> getAllHouses(String apiKey);
+    Observable<List<HouseData>> getAllHouses();
 
-    Observable<CharacterData> getCharacterById(String apiKey, String characterId);
+    Observable<CharacterData> getCharacterById(String characterId);
 }

@@ -1,0 +1,10 @@
+/Users/apple/Downloads/HarryPotter/remote/src/main/java/com/neeraja/harrypotter/remote/api/HarryPotterService.kt
+/Users/apple/Downloads/HarryPotter/remote/src/main/java/com/neeraja/harrypotter/remote/mapper/CharacterDataNetworkMapper.kt
+/Users/apple/Downloads/HarryPotter/remote/src/main/java/com/neeraja/harrypotter/remote/mapper/HouseDataNetworkMapper.kt
+/Users/apple/Downloads/HarryPotter/remote/src/main/java/com/neeraja/harrypotter/remote/mapper/Mapper.kt
+/Users/apple/Downloads/HarryPotter/remote/src/main/java/com/neeraja/harrypotter/remote/mapper/MemberDataNetworkMapper.kt
+/Users/apple/Downloads/HarryPotter/remote/src/main/java/com/neeraja/harrypotter/remote/models/CharacterNetwork.kt
+/Users/apple/Downloads/HarryPotter/remote/src/main/java/com/neeraja/harrypotter/remote/models/HouseNetwork.kt
+/Users/apple/Downloads/HarryPotter/remote/src/main/java/com/neeraja/harrypotter/remote/models/MemberNetwork.kt
+/Users/apple/Downloads/HarryPotter/remote/src/main/java/com/neeraja/harrypotter/remote/models/ResponseWrapper.kt
+/Users/apple/Downloads/HarryPotter/remote/src/main/java/com/neeraja/harrypotter/remote/source/RemoteDataSourceImpl.kt

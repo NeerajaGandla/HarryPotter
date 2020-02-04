@@ -40,10 +40,10 @@ public class GetHouseByIdTest {
         String id = "testId";
         final HouseEntity house = TestDataGenerator.getHouse();
 
-        Mockito.when(hogwartsRepository.getHouseByID(apiKey, id))
+        Mockito.when(hogwartsRepository.getHouseByID(id))
                 .thenReturn(Observable.just(house));
 
-        TestObserver testObserver = getHouseByIdTask.buildUsecase(new GetHouseByIdTask.Params(apiKey, id)).test();
+        TestObserver testObserver = getHouseByIdTask.buildUsecase(id).test();
 
         testObserver.assertSubscribed()
                 .assertValue((Predicate)(new Predicate() {
@@ -64,10 +64,10 @@ public class GetHouseByIdTest {
         String id = "testId";
         final String errorMsg = "Error Occured";
 
-        Mockito.when(hogwartsRepository.getHouseByID(apiKey, id))
+        Mockito.when(hogwartsRepository.getHouseByID(id))
                 .thenReturn(Observable.<HouseEntity>error(new Throwable(errorMsg)));
 
-        TestObserver testObserver = getHouseByIdTask.buildUsecase(new GetHouseByIdTask.Params(apiKey, id)).test();
+        TestObserver testObserver = getHouseByIdTask.buildUsecase(id).test();
         testObserver.assertSubscribed()
                 .assertError((Predicate)(new Predicate() {
                     @Override

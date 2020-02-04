@@ -32,9 +32,6 @@ public class GetAllHousesTask extends ObservableUsecase<List<HouseEntity>, Strin
 
     @Override
     protected Observable<List<HouseEntity>> generateObservable(String input) {
-        if (input == null) {
-           throw new IllegalArgumentException("User identifier can't be null");
-        }
-        return hogwartsRepository.getAllHouses(input);
+        return hogwartsRepository.getAllHouses();
     }
 }

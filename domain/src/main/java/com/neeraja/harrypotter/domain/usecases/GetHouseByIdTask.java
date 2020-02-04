@@ -11,7 +11,7 @@ import javax.inject.Inject;
 import io.reactivex.Observable;
 import io.reactivex.Scheduler;
 
-public class GetHouseByIdTask extends ObservableUsecase<HouseEntity, GetHouseByIdTask.Params> {
+public class GetHouseByIdTask extends ObservableUsecase<HouseEntity, String> {
     private HogwartsRepository hogwartsRepository;
     @Foreground
     Scheduler foregroundScheduler;
@@ -27,20 +27,11 @@ public class GetHouseByIdTask extends ObservableUsecase<HouseEntity, GetHouseByI
     }
 
     @Override
-    protected Observable generateObservable(Params params) {
-        if (params == null) {
+    protected Observable generateObservable(String houseId) {
+        if (houseId == null) {
             throw new IllegalArgumentException("User identifier can't be null");
         }
-        return hogwartsRepository.getHouseByID(params.apiKey, params.houseId);
+        return hogwartsRepository.getHouseByID(houseId);
     }
 
-    static class Params {
-        String apiKey;
-        String houseId;
-
-        Params(String apiKey, String houseId) {
-            this.apiKey = apiKey;
-            this.houseId = houseId;
-        }
-    }
 }

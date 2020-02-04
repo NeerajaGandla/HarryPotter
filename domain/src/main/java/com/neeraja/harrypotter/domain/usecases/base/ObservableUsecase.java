@@ -13,7 +13,7 @@ public abstract class ObservableUsecase<T, Input> {
         this.backgroundScheduler = backgroundScheduler;
     }
 
-    protected abstract Observable generateObservable(Input input);
+    protected abstract Observable<T> generateObservable(Input input);
 
     public Observable<T> buildUsecase(Input input) {
         return generateObservable(input)

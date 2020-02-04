@@ -37,9 +37,9 @@ public class GetCharacterByIdTest {
         String id = "Test";
         final CharacterEntity character = TestDataGenerator.getCharacter();
 
-        Mockito.when(hogwartsRepository.getCharacterByID(apiKey, id))
+        Mockito.when(hogwartsRepository.getCharacterByID(id))
                 .thenReturn(Observable.just(character));
-        TestObserver testObserver = getCharacterByIdTask.buildUsecase(new GetCharacterByIdTask.Params(apiKey, id)).test();
+        TestObserver testObserver = getCharacterByIdTask.buildUsecase(id).test();
         testObserver.assertSubscribed()
                 .assertValue((Predicate)(new Predicate() {
                     @Override
@@ -59,9 +59,9 @@ public class GetCharacterByIdTest {
         String id = "test";
         final String errorMsg = "Error occured";
 
-        Mockito.when(hogwartsRepository.getCharacterByID(apiKey, id))
+        Mockito.when(hogwartsRepository.getCharacterByID(id))
                 .thenReturn(Observable.<CharacterEntity>error(new Throwable(errorMsg)));
-        TestObserver testObserver = getCharacterByIdTask.buildUsecase(new GetCharacterByIdTask.Params(apiKey, id)).test();
+        TestObserver testObserver = getCharacterByIdTask.buildUsecase(id).test();
         testObserver.assertSubscribed()
                 .assertError((Predicate)(new Predicate() {
                     @Override

@@ -38,7 +38,7 @@ public class GetHousesTest {
     public void test_getAllHousesTask_success() {
         String apiKey = "test";
         final List<HouseEntity> houses = TestDataGenerator.getAllHousesData();
-        Mockito.when(hogwartsRepository.getAllHouses(apiKey))
+        Mockito.when(hogwartsRepository.getAllHouses())
                 .thenReturn(Observable.just(houses));
         TestObserver testObserver = getAllHousesTask.buildUsecase(apiKey).test();
         testObserver.assertSubscribed()
@@ -59,7 +59,7 @@ public class GetHousesTest {
     public void test_getAllHousesTask_error() {
         String apiKey = "test";
         final String errorMsg = "Error Occured";
-        Mockito.when(hogwartsRepository.getAllHouses(apiKey))
+        Mockito.when(hogwartsRepository.getAllHouses())
                 .thenReturn(Observable.<List<HouseEntity>>error(new Throwable(errorMsg)));
         TestObserver testObserver = getAllHousesTask.buildUsecase(apiKey).test();
         testObserver.assertSubscribed()

@@ -30,9 +30,9 @@ public class HogwartsRepositoryImpl implements HogwartsRepository {
     }
 
     @Override
-    public Observable<List<HouseEntity>> getAllHouses(String apiKey) {
+    public Observable<List<HouseEntity>> getAllHouses() {
         final List<HouseEntity> houseEntities = new ArrayList<>();
-        Observable observable = remoteDataSource.getAllHouses(apiKey).map((Function) (new Function() {
+        Observable observable = remoteDataSource.getAllHouses().map((Function) (new Function() {
             @Override
             public Object apply(Object o) throws Exception {
                 return this.apply((List) o);
@@ -50,8 +50,8 @@ public class HogwartsRepositoryImpl implements HogwartsRepository {
     }
 
     @Override
-    public Observable<HouseEntity> getHouseByID(String apiKey, String houseId) {
-        Observable observable = remoteDataSource.getHouseById(apiKey, houseId).map((Function) (new Function() {
+    public Observable<HouseEntity> getHouseByID(String houseId) {
+        Observable observable = remoteDataSource.getHouseById(houseId).map((Function) (new Function() {
             @Override
             public Object apply(Object o) throws Exception {
                 return this.apply((List) o);
@@ -66,8 +66,8 @@ public class HogwartsRepositoryImpl implements HogwartsRepository {
     }
 
     @Override
-    public Observable<CharacterEntity> getCharacterByID(String apiKey, String characterId) {
-        Observable observable = remoteDataSource.getCharacterById(apiKey, characterId).map((Function) (new Function() {
+    public Observable<CharacterEntity> getCharacterByID(String characterId) {
+        Observable observable = remoteDataSource.getCharacterById(characterId).map((Function) (new Function() {
             @Override
             public Object apply(Object o) throws Exception {
                 return this.apply((List) o);
