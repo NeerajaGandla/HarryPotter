@@ -9,9 +9,9 @@ import io.reactivex.Observable;
 
 public interface HogwartsRepository {
 
-    Observable<List<HouseEntity>> getAllHouses();
+    Observable<List<HouseEntity>> getAllHouses(String apiKey);
 
-    Observable<HouseEntity> getHouseByID(String houseId);
+    Observable<HouseEntity> getHouseByID(String apiKey, String houseId);
 
-    Observable<CharacterEntity> getCharacterByID(String characterId);
+    Observable<CharacterEntity> getCharacterByID(String apiKey, String characterId);
 }

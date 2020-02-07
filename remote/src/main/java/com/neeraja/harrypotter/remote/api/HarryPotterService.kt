@@ -9,11 +9,11 @@ import retrofit2.http.Query
 interface HarryPotterService {
 
     @GET("houses")
-    fun getAllHousesInfo() : Observable<ResponseWrapper>
+    fun getAllHousesInfo(@Query("key") key: String) : Observable<ResponseWrapper>
 
     @GET("houses/{houseId}")
-    fun getHouseByIdInfo(@Path("houseId") houseId : String) : Observable<ResponseWrapper>
+    fun getHouseByIdInfo(@Query("key") key: String, @Path("houseId") houseId : String) : Observable<ResponseWrapper>
 
     @GET("characters/{characterId}")
-    fun getCharacterById(@Path("characterId") characterId : String) : Observable<ResponseWrapper>
+    fun getCharacterById(@Query("key") key: String, @Path("characterId") characterId : String) : Observable<ResponseWrapper>
 }

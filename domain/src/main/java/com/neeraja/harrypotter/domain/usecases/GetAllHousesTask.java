@@ -32,6 +32,7 @@ public class GetAllHousesTask extends ObservableUsecase<List<HouseEntity>, Strin
 
     @Override
     protected Observable<List<HouseEntity>> generateObservable(String input) {
-        return hogwartsRepository.getAllHouses();
+        return hogwartsRepository.getAllHouses(input);
     }
+
 }

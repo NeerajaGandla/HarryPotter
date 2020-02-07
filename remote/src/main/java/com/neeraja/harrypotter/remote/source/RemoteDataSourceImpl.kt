@@ -15,8 +15,8 @@ class RemoteDataSourceImpl @Inject constructor(
         private val characterMapper: Mapper<CharacterData, CharacterNetwork>,
         private val potterService: HarryPotterService
 ) : RemoteDataSource {
-    override fun getAllHouses(): Observable<List<HouseData>> {
-        return potterService.getAllHousesInfo()
+    override fun getAllHouses(apiKey : String): Observable<List<HouseData>> {
+        return potterService.getAllHousesInfo(apiKey)
                 .map { response ->
                     println("Remote Get All Houses Invoked")
                     response.housesInfo.map {
@@ -25,16 +25,16 @@ class RemoteDataSourceImpl @Inject constructor(
                 }
     }
 
-    override fun getCharacterById(characterId: String): Observable<CharacterData> {
-        return potterService.getCharacterById(characterId)
+    override fun getCharacterById(apiKey: String, characterId: String): Observable<CharacterData> {
+        return potterService.getCharacterById(apiKey, characterId)
                 .map { response ->
                     println("Remote Get character By Id invoked")
                     characterMapper.from(response.character)
                 }
     }
 
-    override fun getHouseById(houseId: String): Observable<HouseData> {
-        return potterService.getHouseByIdInfo(houseId)
+    override fun getHouseById(apiKey: String, houseId: String): Observable<HouseData> {
+        return potterService.getHouseByIdInfo(apiKey, houseId)
                 .map { response ->
                     println("Remote Get character By Id invoked")
                     houseMapper.from(response.houseInfo)

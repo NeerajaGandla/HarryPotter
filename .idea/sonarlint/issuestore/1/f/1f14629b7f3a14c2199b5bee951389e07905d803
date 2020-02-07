@@ -1,0 +1,6 @@
+
+qsquid:S1450"ZRemove the "brandLayout" field and declare it as a local variable in the relevant methods.(ÒËúß
+lsquid:S1450"VRemove the "context" field and declare it as a local variable in the relevant methods.(êİç
+˜squid:S1186%"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ğ«Ôƒ
+squid:S1186*"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(šëÜµøÿÿÿÿ
+squid:S1186/"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(úƒÚÓûÿÿÿÿ
