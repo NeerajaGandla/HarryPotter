@@ -4,17 +4,22 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.neeraja.harrypotter.domain.entities.CharacterEntity
 import com.neeraja.harrypotter.domain.entities.HouseEntity
+import com.neeraja.harrypotter.domain.entities.MemberEntity
 import com.neeraja.harrypotter.presentation.factory.ViewModelFactory
 import com.neeraja.harrypotter.presentation.mapper.CharacterEntityMapper
 import com.neeraja.harrypotter.presentation.mapper.HouseEntityMapper
 import com.neeraja.harrypotter.presentation.mapper.Mapper
+import com.neeraja.harrypotter.presentation.mapper.MemberEntityMapper
+import com.neeraja.harrypotter.presentation.models.Character
 import com.neeraja.harrypotter.presentation.models.House
+import com.neeraja.harrypotter.presentation.models.Member
 import com.neeraja.harrypotter.presentation.viewmodels.CharacterViewModel
 import com.neeraja.harrypotter.presentation.viewmodels.HouseDetailViewModel
 import com.neeraja.harrypotter.presentation.viewmodels.HousesViewModel
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
+import javax.inject.Named
 
 @Module
 abstract class PresentationModule {
@@ -28,6 +33,9 @@ abstract class PresentationModule {
     @IntoMap
     @ViewModelKey(HousesViewModel::class)
     abstract fun bindsHousesViewModel(housesViewModel: HousesViewModel) : ViewModel
+
+//    @Binds
+//    abstract fun bindsCharacterId(characterId : String?) : String?
 
     @Binds
     @IntoMap
@@ -48,4 +56,9 @@ abstract class PresentationModule {
     abstract fun bindsCharacterMapper(
             characterEntityMapper: CharacterEntityMapper
     ) : Mapper<CharacterEntity, Character>
+
+    @Binds
+    abstract fun bindsMemberMapper(
+            memberEntityMapper: MemberEntityMapper
+    ) : Mapper<MemberEntity, Member>
 }

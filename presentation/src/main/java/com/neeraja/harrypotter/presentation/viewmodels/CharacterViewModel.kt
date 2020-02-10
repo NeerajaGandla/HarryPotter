@@ -13,18 +13,21 @@ import io.reactivex.BackpressureStrategy
 import io.reactivex.Observable
 import io.reactivex.functions.Function
 import javax.inject.Inject
+import javax.inject.Named
 
 class CharacterViewModel @Inject constructor(
         @UserIdentity private val userIdentifier: String,
-        private val characterId: String,
         private val mapper: Mapper<CharacterEntity, Character>,
-        private val getCharacterByIdTask: GetCharacterByIdTask
+        val getCharacterByIdTask: GetCharacterByIdTask
 ) : ViewModel() {
+    //    @Inject
+    val characterId: String = ""
+
     val characterByIdResource: LiveData<Resource<Character>>
         get() = getCharacterByIdTask
                 .buildUsecase(GetCharacterByIdTask.Params(userIdentifier, characterId))
-                .map {  mapper.to(it) }
-                .map {  Resource.success(it) }
+                .map { mapper.to(it) }
+                .map { Resource.success(it) }
                 .startWith(Resource.loading())
                 .onErrorResumeNext(
                         Function {

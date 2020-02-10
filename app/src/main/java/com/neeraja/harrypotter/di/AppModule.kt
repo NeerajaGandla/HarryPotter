@@ -2,7 +2,7 @@ package com.neeraja.harrypotter.di
 
 import android.app.Application
 import android.content.Context
-import com.neeraja.harrypotter.ui.HousesActivity
+import com.neeraja.harrypotter.ui.houses.HousesActivity
 import dagger.Binds
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
@@ -14,6 +14,4 @@ abstract class AppModule {
 
     @ContributesAndroidInjector
     internal abstract fun contributesHousesActivity(): HousesActivity
-
-
 }

@@ -13,13 +13,14 @@ import io.reactivex.BackpressureStrategy
 import io.reactivex.Observable
 import io.reactivex.functions.Function
 import javax.inject.Inject
-
+import javax.inject.Named
+/** this ViewModel is currently not in use***/
 class HouseDetailViewModel @Inject constructor(
         @UserIdentity private val userIdentifier : String,
-        private val houseId : String,
         private val mapper : Mapper<HouseEntity, House>,
-        private val getHouseByIdTask: GetHouseByIdTask
+        val getHouseByIdTask: GetHouseByIdTask
 ) : ViewModel() {
+    val houseId : String = ""
     val houseByIdResource : LiveData<Resource<House>>
         get() = getHouseByIdTask
                 .buildUsecase(GetHouseByIdTask.Params(userIdentifier, houseId))

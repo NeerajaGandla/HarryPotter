@@ -21,7 +21,7 @@ public class GetCharacterByIdTask extends ObservableUsecase<CharacterEntity, Get
     Scheduler backgroundScheduler;
 
     @Inject
-    public GetCharacterByIdTask (HogwartsRepository hogwartsRepository, Scheduler foregroundScheduler, Scheduler backgroundScheduler) {
+    public GetCharacterByIdTask (HogwartsRepository hogwartsRepository,@Foreground Scheduler foregroundScheduler,@Background Scheduler backgroundScheduler) {
         super(foregroundScheduler, backgroundScheduler);
         this.hogwartsRepository = hogwartsRepository;
         this.foregroundScheduler = foregroundScheduler;

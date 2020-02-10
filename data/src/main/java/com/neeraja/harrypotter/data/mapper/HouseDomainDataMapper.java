@@ -8,7 +8,13 @@ import com.neeraja.harrypotter.domain.entities.MemberEntity;
 import java.lang.reflect.Member;
 import java.util.List;
 
+import javax.inject.Inject;
+
 public class HouseDomainDataMapper implements Mapper<HouseEntity, HouseData> {
+    @Inject
+    public HouseDomainDataMapper() {
+
+    }
     MemberDomainDataMapper mapper = new MemberDomainDataMapper();
     @Override
     public HouseEntity from(HouseData obj) {

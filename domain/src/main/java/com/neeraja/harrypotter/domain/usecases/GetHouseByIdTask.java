@@ -19,7 +19,7 @@ public class GetHouseByIdTask extends ObservableUsecase<HouseEntity, GetHouseByI
     Scheduler backgroundScheduler;
 
     @Inject
-    public GetHouseByIdTask(HogwartsRepository hogwartsRepository, Scheduler foregroundScheduler, Scheduler backgroundScheduler) {
+    public GetHouseByIdTask(HogwartsRepository hogwartsRepository,@Foreground Scheduler foregroundScheduler,@Background Scheduler backgroundScheduler) {
         super(foregroundScheduler, backgroundScheduler);
         this.hogwartsRepository = hogwartsRepository;
         this.foregroundScheduler = foregroundScheduler;

@@ -23,7 +23,7 @@ public class GetAllHousesTask extends ObservableUsecase<List<HouseEntity>, Strin
     Scheduler backgroundScheduler;
 
     @Inject
-    public GetAllHousesTask(HogwartsRepository hogwartsRepository, Scheduler foregroundScheduler, Scheduler backgroundScheduler) {
+    public GetAllHousesTask(HogwartsRepository hogwartsRepository, @Foreground Scheduler foregroundScheduler, @Background Scheduler backgroundScheduler) {
         super(foregroundScheduler, backgroundScheduler);
         this.hogwartsRepository = hogwartsRepository;
         this.foregroundScheduler = foregroundScheduler;
@@ -34,5 +34,4 @@ public class GetAllHousesTask extends ObservableUsecase<List<HouseEntity>, Strin
     protected Observable<List<HouseEntity>> generateObservable(String input) {
         return hogwartsRepository.getAllHouses(input);
     }
-
 }

@@ -30,6 +30,8 @@ dependencies {
     implementation 'javax.inject:javax.inject:1'
     implementation 'io.reactivex.rxjava2:rxjava:2.2.0'
     implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycleVersion"
+    kapt "androidx.lifecycle:lifecycle-compiler:$lifecycleVersion"
     implementation 'androidx.lifecycle:lifecycle-reactivestreams-ktx:2.0.0'
 
     testImplementation 'junit:junit:4.12'

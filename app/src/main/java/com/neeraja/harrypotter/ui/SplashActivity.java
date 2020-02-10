@@ -4,12 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 
 import com.neeraja.harrypotter.R;
+import com.neeraja.harrypotter.ui.houses.HousesActivity;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -40,7 +42,8 @@ public class SplashActivity extends AppCompatActivity {
 
         @Override
         public void onAnimationEnd(Animation animation) {
-
+            Intent intent = new Intent(SplashActivity.this, HousesActivity.class);
+            startActivity(intent);
         }
 
         @Override

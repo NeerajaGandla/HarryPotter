@@ -1,6 +1,7 @@
 package com.neeraja.harrypotter.di
 
 import com.neeraja.harrypotter.domain.qualifiers.Background
+import com.neeraja.harrypotter.domain.qualifiers.Foreground
 import dagger.Module
 import dagger.Provides
 import io.reactivex.Scheduler
@@ -19,7 +20,7 @@ class DomainModule {
 
     @Singleton
     @Provides
-    @Background
+    @Foreground
     fun providesForegroundScheduler() : Scheduler {
         return AndroidSchedulers.mainThread()
     }
