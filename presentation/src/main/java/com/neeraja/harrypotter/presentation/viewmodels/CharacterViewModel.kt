@@ -13,7 +13,6 @@ import io.reactivex.BackpressureStrategy
 import io.reactivex.Observable
 import io.reactivex.functions.Function
 import javax.inject.Inject
-import javax.inject.Named
 
 class CharacterViewModel @Inject constructor(
         @UserIdentity private val userIdentifier: String,

@@ -4,6 +4,7 @@ package com.neeraja.harrypotter.di;
 import android.app.Application;
 import androidx.lifecycle.ViewModel;
 import com.neeraja.harrypotter.application.HarryPotterApp;
+import com.neeraja.harrypotter.application.HarryPotterApp_MembersInjector;
 import com.neeraja.harrypotter.data.mapper.CharacterDomainDataMapper_Factory;
 import com.neeraja.harrypotter.data.mapper.HouseDomainDataMapper_Factory;
 import com.neeraja.harrypotter.data.repository.HogwartsRepositoryImpl;
@@ -31,11 +32,15 @@ import com.neeraja.harrypotter.remote.source.RemoteDataSourceImpl;
 import com.neeraja.harrypotter.remote.source.RemoteDataSourceImpl_Factory;
 import com.neeraja.harrypotter.ui.houses.HousesActivity;
 import com.neeraja.harrypotter.ui.houses.HousesActivity_MembersInjector;
+import com.neeraja.harrypotter.ui.houses.fragments.HousesFragment;
+import com.neeraja.harrypotter.ui.houses.fragments.HousesFragment_MembersInjector;
 import dagger.android.AndroidInjector;
 import dagger.android.DaggerApplication_MembersInjector;
 import dagger.android.DispatchingAndroidInjector;
 import dagger.android.DispatchingAndroidInjector_Factory;
+import dagger.android.support.DaggerFragment_MembersInjector;
 import dagger.internal.DoubleCheck;
+import dagger.internal.MapBuilder;
 import dagger.internal.MapProviderFactory;
 import dagger.internal.Preconditions;
 import io.reactivex.Scheduler;
@@ -50,6 +55,8 @@ import retrofit2.Retrofit;
 })
 public final class DaggerHarryPotterAppComponent implements HarryPotterAppComponent {
   private Provider<AppModule_ContributesHousesActivity$app_debug.HousesActivitySubcomponent.Factory> housesActivitySubcomponentFactoryProvider;
+
+  private Provider<AppModule_ContributeMainFragment.HousesFragmentSubcomponent.Factory> housesFragmentSubcomponentFactoryProvider;
 
   private Provider<String> provideApiKeyProvider;
 
@@ -93,7 +100,7 @@ public final class DaggerHarryPotterAppComponent implements HarryPotterAppCompon
 
   private Map<Class<?>, Provider<AndroidInjector.Factory<?>>> getMapOfClassOfAndProviderOfAndroidInjectorFactoryOf(
       ) {
-    return Collections.<Class<?>, Provider<AndroidInjector.Factory<?>>>singletonMap(HousesActivity.class, (Provider) housesActivitySubcomponentFactoryProvider);}
+    return MapBuilder.<Class<?>, Provider<AndroidInjector.Factory<?>>>newMapBuilder(2).put(HousesActivity.class, (Provider) housesActivitySubcomponentFactoryProvider).put(HousesFragment.class, (Provider) housesFragmentSubcomponentFactoryProvider).build();}
 
   private DispatchingAndroidInjector<Object> getDispatchingAndroidInjectorOfObject() {
     return DispatchingAndroidInjector_Factory.newInstance(getMapOfClassOfAndProviderOfAndroidInjectorFactoryOf(), Collections.<String, Provider<AndroidInjector.Factory<?>>>emptyMap());}
@@ -107,6 +114,11 @@ public final class DaggerHarryPotterAppComponent implements HarryPotterAppCompon
       public AppModule_ContributesHousesActivity$app_debug.HousesActivitySubcomponent.Factory get(
           ) {
         return new HousesActivitySubcomponentFactory();}
+    };
+    this.housesFragmentSubcomponentFactoryProvider = new Provider<AppModule_ContributeMainFragment.HousesFragmentSubcomponent.Factory>() {
+      @Override
+      public AppModule_ContributeMainFragment.HousesFragmentSubcomponent.Factory get() {
+        return new HousesFragmentSubcomponentFactory();}
     };
     this.provideApiKeyProvider = IdentityModule_ProvideApiKeyFactory.create(identityModuleParam);
     this.providesRetrofitProvider = RemoteModule_ProvidesRetrofitFactory.create(remoteModuleParam);
@@ -131,6 +143,7 @@ public final class DaggerHarryPotterAppComponent implements HarryPotterAppCompon
 
   private HarryPotterApp injectHarryPotterApp(HarryPotterApp instance) {
     DaggerApplication_MembersInjector.injectAndroidInjector(instance, getDispatchingAndroidInjectorOfObject());
+    HarryPotterApp_MembersInjector.injectDispatchingAndroidInjector(instance, getDispatchingAndroidInjectorOfObject());
     return instance;
   }
 
@@ -170,6 +183,32 @@ public final class DaggerHarryPotterAppComponent implements HarryPotterAppCompon
 
     private HousesActivity injectHousesActivity(HousesActivity instance) {
       HousesActivity_MembersInjector.injectViewModelFactory(instance, DaggerHarryPotterAppComponent.this.viewModelFactoryProvider.get());
+      HousesActivity_MembersInjector.injectDispatchingAndroidInjector(instance, DaggerHarryPotterAppComponent.this.getDispatchingAndroidInjectorOfObject());
+      return instance;
+    }
+  }
+
+  private final class HousesFragmentSubcomponentFactory implements AppModule_ContributeMainFragment.HousesFragmentSubcomponent.Factory {
+    @Override
+    public AppModule_ContributeMainFragment.HousesFragmentSubcomponent create(HousesFragment arg0) {
+      Preconditions.checkNotNull(arg0);
+      return new HousesFragmentSubcomponentImpl(arg0);
+    }
+  }
+
+  private final class HousesFragmentSubcomponentImpl implements AppModule_ContributeMainFragment.HousesFragmentSubcomponent {
+    private HousesFragmentSubcomponentImpl(HousesFragment arg0) {
+
+    }
+
+    @Override
+    public void inject(HousesFragment arg0) {
+      injectHousesFragment(arg0);}
+
+    private HousesFragment injectHousesFragment(HousesFragment instance) {
+      DaggerFragment_MembersInjector.injectAndroidInjector(instance, DaggerHarryPotterAppComponent.this.getDispatchingAndroidInjectorOfObject());
+      HousesFragment_MembersInjector.injectAndroidInjector(instance, DaggerHarryPotterAppComponent.this.getDispatchingAndroidInjectorOfObject());
+      HousesFragment_MembersInjector.injectViewModelFactory(instance, DaggerHarryPotterAppComponent.this.viewModelFactoryProvider.get());
       return instance;
     }
   }

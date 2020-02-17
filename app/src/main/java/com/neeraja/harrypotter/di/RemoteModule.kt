@@ -14,9 +14,12 @@ import com.neeraja.harrypotter.remote.source.RemoteDataSourceImpl
 import dagger.Binds
 import dagger.Module
 import dagger.Provides
+import okhttp3.OkHttpClient.Builder
+import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
+
 
 @Module(includes = ([RemoteModule.Binders::class]))
 class RemoteModule {
@@ -44,10 +47,24 @@ class RemoteModule {
             retrofit.create(HarryPotterService::class.java)
 
     @Provides
-    fun providesRetrofit() : Retrofit =
-            Retrofit.Builder()
-                    .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-                    .addConverterFactory(GsonConverterFactory.create())
-                    .baseUrl(BuildConfig.BASE_URL)
-                    .build()
+    fun providesRetrofit() : Retrofit {
+        val logging = HttpLoggingInterceptor()
+// set your desired log level
+        // set your desired log level
+        logging.level = HttpLoggingInterceptor.Level.BODY
+
+        val httpClient = Builder()
+// add your other interceptors …
+
+// add logging as last interceptor
+        // add your other interceptors …
+// add logging as last interceptor
+        httpClient.addInterceptor(logging)
+        return   Retrofit.Builder()
+                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                .addConverterFactory(GsonConverterFactory.create())
+                .client(httpClient.build())
+                .baseUrl(BuildConfig.BASE_URL)
+                .build()
+    }
 }

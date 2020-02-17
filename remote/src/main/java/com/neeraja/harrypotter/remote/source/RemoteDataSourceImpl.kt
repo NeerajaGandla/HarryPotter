@@ -7,6 +7,7 @@ import com.neeraja.harrypotter.remote.api.HarryPotterService
 import com.neeraja.harrypotter.remote.mapper.Mapper
 import com.neeraja.harrypotter.remote.models.CharacterNetwork
 import com.neeraja.harrypotter.remote.models.HouseNetwork
+import com.neeraja.harrypotter.remote.models.ResponseWrapper
 import io.reactivex.Observable
 import javax.inject.Inject
 
@@ -15,8 +16,9 @@ class RemoteDataSourceImpl @Inject constructor(
         private val characterMapper: Mapper<CharacterData, CharacterNetwork>,
         private val potterService: HarryPotterService
 ) : RemoteDataSource {
-    override fun getAllHouses(apiKey : String): Observable<List<HouseData>> {
-        return potterService.getAllHousesInfo(apiKey)
+    override fun getAllHouses(apiKey: String): Observable<List<HouseData>> {
+        val observable: Observable<ResponseWrapper> = potterService.getAllHousesInfo(apiKey)
+        return observable
                 .map { response ->
                     println("Remote Get All Houses Invoked")
                     response.housesInfo.map {

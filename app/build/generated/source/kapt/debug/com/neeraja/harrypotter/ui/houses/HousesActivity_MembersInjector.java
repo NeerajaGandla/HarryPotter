@@ -3,6 +3,7 @@ package com.neeraja.harrypotter.ui.houses;
 
 import com.neeraja.harrypotter.presentation.factory.ViewModelFactory;
 import dagger.MembersInjector;
+import dagger.android.DispatchingAndroidInjector;
 import dagger.internal.InjectedFieldSignature;
 import javax.inject.Provider;
 
@@ -13,22 +14,34 @@ import javax.inject.Provider;
 public final class HousesActivity_MembersInjector implements MembersInjector<HousesActivity> {
   private final Provider<ViewModelFactory> viewModelFactoryProvider;
 
-  public HousesActivity_MembersInjector(Provider<ViewModelFactory> viewModelFactoryProvider) {
+  private final Provider<DispatchingAndroidInjector<Object>> dispatchingAndroidInjectorProvider;
+
+  public HousesActivity_MembersInjector(Provider<ViewModelFactory> viewModelFactoryProvider,
+      Provider<DispatchingAndroidInjector<Object>> dispatchingAndroidInjectorProvider) {
     this.viewModelFactoryProvider = viewModelFactoryProvider;
+    this.dispatchingAndroidInjectorProvider = dispatchingAndroidInjectorProvider;
   }
 
   public static MembersInjector<HousesActivity> create(
-      Provider<ViewModelFactory> viewModelFactoryProvider) {
-    return new HousesActivity_MembersInjector(viewModelFactoryProvider);}
+      Provider<ViewModelFactory> viewModelFactoryProvider,
+      Provider<DispatchingAndroidInjector<Object>> dispatchingAndroidInjectorProvider) {
+    return new HousesActivity_MembersInjector(viewModelFactoryProvider, dispatchingAndroidInjectorProvider);}
 
   @Override
   public void injectMembers(HousesActivity instance) {
     injectViewModelFactory(instance, viewModelFactoryProvider.get());
+    injectDispatchingAndroidInjector(instance, dispatchingAndroidInjectorProvider.get());
   }
 
   @InjectedFieldSignature("com.neeraja.harrypotter.ui.houses.HousesActivity.viewModelFactory")
   public static void injectViewModelFactory(HousesActivity instance,
       ViewModelFactory viewModelFactory) {
     instance.viewModelFactory = viewModelFactory;
+  }
+
+  @InjectedFieldSignature("com.neeraja.harrypotter.ui.houses.HousesActivity.dispatchingAndroidInjector")
+  public static void injectDispatchingAndroidInjector(HousesActivity instance,
+      DispatchingAndroidInjector<Object> dispatchingAndroidInjector) {
+    instance.dispatchingAndroidInjector = dispatchingAndroidInjector;
   }
 }

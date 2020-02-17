@@ -15,24 +15,36 @@ import javax.inject.Provider;
 public final class HousesFragment_MembersInjector implements MembersInjector<HousesFragment> {
   private final Provider<DispatchingAndroidInjector<Object>> androidInjectorProvider;
 
+  private final Provider<DispatchingAndroidInjector<Object>> androidInjectorProvider2;
+
   private final Provider<ViewModelFactory> viewModelFactoryProvider;
 
   public HousesFragment_MembersInjector(
       Provider<DispatchingAndroidInjector<Object>> androidInjectorProvider,
+      Provider<DispatchingAndroidInjector<Object>> androidInjectorProvider2,
       Provider<ViewModelFactory> viewModelFactoryProvider) {
     this.androidInjectorProvider = androidInjectorProvider;
+    this.androidInjectorProvider2 = androidInjectorProvider2;
     this.viewModelFactoryProvider = viewModelFactoryProvider;
   }
 
   public static MembersInjector<HousesFragment> create(
       Provider<DispatchingAndroidInjector<Object>> androidInjectorProvider,
+      Provider<DispatchingAndroidInjector<Object>> androidInjectorProvider2,
       Provider<ViewModelFactory> viewModelFactoryProvider) {
-    return new HousesFragment_MembersInjector(androidInjectorProvider, viewModelFactoryProvider);}
+    return new HousesFragment_MembersInjector(androidInjectorProvider, androidInjectorProvider2, viewModelFactoryProvider);}
 
   @Override
   public void injectMembers(HousesFragment instance) {
     DaggerFragment_MembersInjector.injectAndroidInjector(instance, androidInjectorProvider.get());
+    injectAndroidInjector(instance, androidInjectorProvider2.get());
     injectViewModelFactory(instance, viewModelFactoryProvider.get());
+  }
+
+  @InjectedFieldSignature("com.neeraja.harrypotter.ui.houses.fragments.HousesFragment.androidInjector")
+  public static void injectAndroidInjector(HousesFragment instance,
+      DispatchingAndroidInjector<Object> androidInjector) {
+    instance.androidInjector = androidInjector;
   }
 
   @InjectedFieldSignature("com.neeraja.harrypotter.ui.houses.fragments.HousesFragment.viewModelFactory")

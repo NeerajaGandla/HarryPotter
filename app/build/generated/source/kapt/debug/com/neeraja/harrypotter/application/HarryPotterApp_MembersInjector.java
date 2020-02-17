@@ -4,6 +4,7 @@ package com.neeraja.harrypotter.application;
 import dagger.MembersInjector;
 import dagger.android.DaggerApplication_MembersInjector;
 import dagger.android.DispatchingAndroidInjector;
+import dagger.internal.InjectedFieldSignature;
 import javax.inject.Provider;
 
 @SuppressWarnings({
@@ -13,17 +14,29 @@ import javax.inject.Provider;
 public final class HarryPotterApp_MembersInjector implements MembersInjector<HarryPotterApp> {
   private final Provider<DispatchingAndroidInjector<Object>> androidInjectorProvider;
 
+  private final Provider<DispatchingAndroidInjector<Object>> dispatchingAndroidInjectorProvider;
+
   public HarryPotterApp_MembersInjector(
-      Provider<DispatchingAndroidInjector<Object>> androidInjectorProvider) {
+      Provider<DispatchingAndroidInjector<Object>> androidInjectorProvider,
+      Provider<DispatchingAndroidInjector<Object>> dispatchingAndroidInjectorProvider) {
     this.androidInjectorProvider = androidInjectorProvider;
+    this.dispatchingAndroidInjectorProvider = dispatchingAndroidInjectorProvider;
   }
 
   public static MembersInjector<HarryPotterApp> create(
-      Provider<DispatchingAndroidInjector<Object>> androidInjectorProvider) {
-    return new HarryPotterApp_MembersInjector(androidInjectorProvider);}
+      Provider<DispatchingAndroidInjector<Object>> androidInjectorProvider,
+      Provider<DispatchingAndroidInjector<Object>> dispatchingAndroidInjectorProvider) {
+    return new HarryPotterApp_MembersInjector(androidInjectorProvider, dispatchingAndroidInjectorProvider);}
 
   @Override
   public void injectMembers(HarryPotterApp instance) {
     DaggerApplication_MembersInjector.injectAndroidInjector(instance, androidInjectorProvider.get());
+    injectDispatchingAndroidInjector(instance, dispatchingAndroidInjectorProvider.get());
+  }
+
+  @InjectedFieldSignature("com.neeraja.harrypotter.application.HarryPotterApp.dispatchingAndroidInjector")
+  public static void injectDispatchingAndroidInjector(HarryPotterApp instance,
+      DispatchingAndroidInjector<Object> dispatchingAndroidInjector) {
+    instance.dispatchingAndroidInjector = dispatchingAndroidInjector;
   }
 }

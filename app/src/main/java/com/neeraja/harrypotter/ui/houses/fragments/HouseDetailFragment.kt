@@ -1,5 +1,6 @@
 package com.neeraja.harrypotter.ui.houses.fragments
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -12,6 +13,7 @@ import com.neeraja.harrypotter.presentation.models.House
 import com.neeraja.harrypotter.presentation.models.Status
 import com.neeraja.harrypotter.presentation.viewmodels.HouseDetailViewModel
 import com.neeraja.harrypotter.presentation.viewmodels.HousesViewModel
+import dagger.android.support.AndroidSupportInjection
 import dagger.android.support.DaggerFragment
 import kotlinx.android.synthetic.main.activity_houses.*
 import kotlinx.android.synthetic.main.fragment_house_details.*
@@ -26,6 +28,11 @@ class HouseDetailFragment : DaggerFragment() {
 
     @Inject
     lateinit var houseId: String
+
+    override fun onAttach(context: Context) {
+        AndroidSupportInjection.inject(this)
+        super.onAttach(context)
+    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_house_details, container, false)

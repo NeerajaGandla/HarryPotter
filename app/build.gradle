@@ -70,6 +70,8 @@ dependencies {
 
     implementation "androidx.recyclerview:recyclerview:$recyclerviewVersion"
 
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.8.0'
+
 
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'

@@ -1,7 +1,9 @@
 package com.neeraja.harrypotter.remote.api
 
+import com.neeraja.harrypotter.remote.models.HouseNetwork
 import com.neeraja.harrypotter.remote.models.ResponseWrapper
 import io.reactivex.Observable
+import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query

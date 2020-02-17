@@ -1,5 +1,6 @@
 package com.neeraja.harrypotter.ui.houses.fragments
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -15,13 +16,21 @@ import com.neeraja.harrypotter.presentation.models.House
 import com.neeraja.harrypotter.presentation.models.Status
 import com.neeraja.harrypotter.presentation.viewmodels.HousesViewModel
 import com.neeraja.harrypotter.ui.houses.adapters.HousesAdapter
+import dagger.android.AndroidInjector
+import dagger.android.DispatchingAndroidInjector
+import dagger.android.HasAndroidInjector
+import dagger.android.support.AndroidSupportInjection
 import dagger.android.support.DaggerFragment
 import kotlinx.android.synthetic.main.activity_houses.*
 import kotlinx.android.synthetic.main.fragment_houses.*
 import javax.inject.Inject
 
 class HousesFragment : DaggerFragment(),
-        HousesAdapter.HouseClickListener {
+        HousesAdapter.HouseClickListener, HasAndroidInjector {
+
+    @Inject
+    lateinit var androidInjector: DispatchingAndroidInjector<Any>
+
     private var sharedViewModel: HousesViewModel? = null
 
     @Inject
@@ -29,9 +38,16 @@ class HousesFragment : DaggerFragment(),
 
     private val housesAdapter = HousesAdapter(this)
 
+    override fun onAttach(context: Context) {
+        AndroidSupportInjection.inject(this)
+        super.onAttach(context)
+    }
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_houses, container, false)
     }
+
+    override fun androidInjector(): AndroidInjector<Any> = androidInjector
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         sharedViewModel = activity?.let { ViewModelProviders.of(it, viewModelFactory).get(HousesViewModel::class.java) }
@@ -60,12 +76,12 @@ class HousesFragment : DaggerFragment(),
     }
 
     private fun showLoader() {
-        pbHouseLoader.visibility = View.VISIBLE
+        activity?.pbHouseLoader?.visibility = View.VISIBLE
         housesRecyclerView.alpha = ALPHA_HIDDEN
     }
 
     private fun hideLoader() {
-        pbHouseLoader.visibility = View.GONE
+        activity?.pbHouseLoader?.visibility = View.GONE
         housesRecyclerView.alpha = ALPHA_VISIBLE
     }
 
